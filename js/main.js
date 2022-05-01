@@ -1,21 +1,25 @@
 //count the ticks and add to count
-document.querySelector('count').innerText = 0
-document.querySelector('#counter').addEventListener('click', addAmount)
+// This works 
+// document.querySelector('#counter').addEventListener('click', addAmount)
+
+// function addAmount(){
+ 
+//     const amount = document.querySelectorAll('input[type="checkbox"]:checked');
+//     document.querySelector('#count').innerText = (amount.length);
+// }
+
+//Attempting to add on change rather than click
+
+
+document.addEventListener('change', addAmount)
 
 function addAmount(){
  
     const amount = document.querySelectorAll('input[type="checkbox"]:checked');
-    document.querySelector('#count').innerText = (checkboxes.length);
+    document.querySelector('#count').innerText = (amount.length);
 }
-// .catch(err => {
-//     console.log(`error ${err}`)
-// })
-// }
 
-// document.getElementById('select').onclick = function() {
-//     let checkboxes = 
-    
-// }
+
 
 
 
