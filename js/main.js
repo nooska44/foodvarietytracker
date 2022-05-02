@@ -11,6 +11,18 @@
 //Attempting to add on change rather than click
 
 
+// document.addEventListener('change', addAmount)
+
+// function addAmount(){
+ 
+//     const amount = document.querySelectorAll('input[type="checkbox"]:checked');
+//     localStorage.setItem('checks', amount)
+//     document.querySelector('#count').innerText += localStorage.getItem('checks');
+//     // document.querySelector('#count').innerText = (amount.length);
+// }
+
+
+//incase I mess up 
 document.addEventListener('change', addAmount)
 
 function addAmount(){
@@ -22,8 +34,11 @@ function addAmount(){
 
 
 
-
 // store in local storage 
+
+
+
+
 
 // localStorage.setItem('#items')
 
@@ -48,3 +63,4 @@ function addAmount(){
 
 // reset - deletes local storage
 
+// localStorage.clear()
