@@ -62,12 +62,17 @@ function updateCount(event){
 }
 
 
-document.getElementById("clear").onclick = clear_me;
+// document.addEventListener('click', clearAll)
+// // document.getElementById("clear").onclick = clear_me;
 
-function clear_me() {
-    localStorage.clear();
+// function clearAll() {
+//     // document.querySelectorAll('.button').forEach(_checkbox=>{
+//         for(let i = 0; i < keys.length; i++ ){
+//             let element = document.getElementById(keys[i]).checked = false
+    
+//     };
    
-}
+// }
 
 //add document.addEventListener('click', clear)
 
@@ -80,7 +85,7 @@ function clear_me() {
 
 
 
-document.getElementById('clear')
+// document.getElementById('clear')
 
 // document.addEventListener('click', clear)
 
@@ -120,4 +125,4 @@ document.getElementById('clear')
 
 // reset - deletes local storage
 
-// localStorage.clear()
+// localStorage.clear()//
