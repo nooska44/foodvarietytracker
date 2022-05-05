@@ -1,41 +1,4 @@
-//count the ticks and add to count
-// This works 
-// document.querySelector('#counter').addEventListener('click', addAmount)
-
-// function addAmount(){
- 
-//     const amount = document.querySelectorAll('input[type="checkbox"]:checked');
-//     document.querySelector('#count').innerText = (amount.length);
-// }
-
-//Attempting to add on change rather than click
-
-
-// document.addEventListener('change', addAmount)
-
-// function addAmount(){
- 
-//     const amount = document.querySelectorAll('input[type="checkbox"]:checked');
-//     localStorage.setItem('checks', amount)
-//     document.querySelector('#count').innerText += localStorage.getItem('checks');
-//     // document.querySelector('#count').innerText = (amount.length);
-// }
-
-// //incase I mess up 
-// document.addEventListener('change', addAmount)
-
-// function addAmount(){
- 
-//     const amount = document.querySelectorAll('input[type="checkbox"]:checked');
-//     document.querySelector('#count').innerText = (amount.length);
-// }
-
-
-
-
-
-
-
+// check the boxes that are stored in local storage
 let keys = Object.keys(localStorage)  
 
 for(let i = 0; i < keys.length; i++ ){
@@ -45,7 +8,7 @@ for(let i = 0; i < keys.length; i++ ){
     }
 }
 
-
+//count as checkboxes are checked and unchecked
 
 document.addEventListener('change', updateCount)
 
@@ -61,22 +24,16 @@ function updateCount(event){
     console.log(event.target.id)
 }
 
+//reset button unchecks all boxes
 
-// document.addEventListener('click', clearAll)
-// // document.getElementById("clear").onclick = clear_me;
+document.querySelector('button').addEventListener('click', clearAll)
 
-// function clearAll() {
-//     // document.querySelectorAll('.button').forEach(_checkbox=>{
-//         for(let i = 0; i < keys.length; i++ ){
-//             let element = document.getElementById(keys[i]).checked = false
-    
-//     };
-   
-// }
-
-//add document.addEventListener('click', clear)
-
-// uncheck all checked boxes 
+ function clearAll() {
+    localStorage.clear()
+    for (const checkbox of document.querySelectorAll('.box')) {
+        checkbox.checked = false //for unselection
+        }
+    }; 
 
 
 
@@ -85,44 +42,3 @@ function updateCount(event){
 
 
 
-// document.getElementById('clear')
-
-// document.addEventListener('click', clear)
-
-// function clear(){
-//     document.querySelector('button').localStorage.clear()
-// }
-
-
-
-
-// store in local storage 
-
-
-
-
-
-// localStorage.setItem('#items')
-
-// let boxes = document.getElementsByClassName('box').length;
-
-// function save() {	
-//   for(let i = 1; i <= boxes; i++){
-// 	  let checkbox = document.getElementById(String(i));
-//     localStorage.setItem("checkbox" + String(i), checkbox.checked);	
-//   }
-// }
-
-// //for loading
-// for(let i = 1; i <= boxes; i++){
-//   if(localStorage.length > 0){
-//     let checked = JSON.parse(localStorage.getItem("checkbox" + String(i)));
-//     document.getElementById(String(i)).checked = checked;
-//   }
-// }
-// window.addEventListener('change', save);
-
-
-// reset - deletes local storage
-
-// localStorage.clear()//
