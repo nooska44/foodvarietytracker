@@ -79,7 +79,20 @@ margin: 3vh;
 
 button{
      width: 20vw;
+
 }
+
+.copyright li{
+	display: inline;
+	text-decoration: none;
+
+}
+
+.copyright {
+
+	text-align: center;
+}
+
 
 /******************************************
 /* ADDITIONAL STYLES
